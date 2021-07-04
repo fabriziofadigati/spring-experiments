@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h1>Create your account</h1>
+
+    <form th:action="@{/signup}" th:object="${patient}" method="POST">
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" th:field="*{username}">
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" th:field="*{firstName}">
+        
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" th:field="*{lastName}">
+
+        <label for="lastName">Password</label>
+        <input type="password" name="password" id="password" th:field="*{password}">
+
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
